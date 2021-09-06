@@ -14,13 +14,13 @@ import { signupBrand } from '../../redux/auth/auth.actions'
 
 const useStyles = makeStyles((theme) => ({
     paper: {
-        marginTop: theme.spacing(1),
+        // marginTop: theme.spacing(1),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
     },
     titleRow: {
-        marginTop: theme.spacing(6),
+        // marginTop: theme.spacing(6),
     }
 }));
 

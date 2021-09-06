@@ -3,6 +3,7 @@ import { watchAuth } from './auth/auth.sagas';
 import { watchUser } from './user/user.sagas';
 import { watchBrands } from './brand/brand.sagas';
 import { watchQrcodes } from './qrcode/qrcode.sagas';
+import { watchQuotes } from './quote/quote.sagas';
 
 export default function* rootSaga() {
   // const [auth, users, products, brands, categories] = 
@@ -11,5 +12,6 @@ export default function* rootSaga() {
     watchUser(),
     watchBrands(),
     watchQrcodes(),
+    watchQuotes(),
   ]);
 }
