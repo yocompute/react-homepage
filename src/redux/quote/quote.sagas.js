@@ -8,6 +8,7 @@ import {
   fetchQuotesFail,
   createQuoteSuccess,
   updateQuoteSuccess,
+  setQuote,
 } from "./quote.actions";
 
 import QuoteApi from "../../services/QuoteApi";
@@ -29,11 +30,11 @@ export function* fetchQuotes(action) {
 
 export function* createQuote(action) {
   try {
-    const { data, error, status } =  yield call(QuoteApi.create, action.data);
-    yield put(createQuoteSuccess(data));
+    const { error, status } =  yield call(QuoteApi.create, action.data);
+    // yield put(createQuoteSuccess(data));
     if (httpSuccess(status)) {
-      const { data, error, status } =  yield call(QuoteApi.get, null);
-      yield put(fetchQuotesSuccess(data));
+      yield put(setQuote({username:'', company:'', email:'', description:'' }));
+      yield put(setNotification('Create quote successfully.', status));
     } else {
       yield put(setNotification(error, status));
     }

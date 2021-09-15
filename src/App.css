@@ -7,9 +7,9 @@
   pointer-events: none;
 }
 
-div {
+/* div {
   box-sizing: 'border-box',
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
