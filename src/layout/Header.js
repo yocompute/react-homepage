@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 // import IconButton from '@material-ui/core/IconButton';
 // import MenuIcon from '@material-ui/icons/Menu';
-import DropdownMenu from '../components/auth/common/DropdownMenu';
+import DropdownMenu from '../components/common/DropdownMenu';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,8 +33,8 @@ const styles = {
 }
 
 const demoMenus = [
-  {name: 'client', text: 'Client Demo'},
-  {name: 'admin', text: 'Admin Demo'}
+  {name: 'admin', text: 'React Back Office'},
+  {name: 'doc', text: 'API Document Framework'},
 ];
 
 export default function Header() {
@@ -43,8 +43,15 @@ export default function Header() {
         window.location = "https://admin.yocompute.com";
     }
 
-    const handleDemoSelect = () => {
-
+    // menu - {name, text}
+    const handleDemoSelect = (menu) => {
+      if(menu.name === 'admin'){
+        window.location.href = "https://admin.yocompute.com";
+        return null;
+      }else if(menu.name === 'doc'){
+        window.location.href = "https://doc.yocompute.com";
+        return null;
+      }
     }
 
   return (
@@ -62,7 +69,7 @@ export default function Header() {
               <Button color="black">
                 <DropdownMenu
                   id="demo"
-                  title="Demos"
+                  title="Demo"
                   menus={demoMenus}
                   onSelect={handleDemoSelect}
                 />

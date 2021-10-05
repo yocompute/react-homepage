@@ -1,8 +1,6 @@
 import React from 'react';
-// import Button from '@material-ui/core/Button';
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
-// import { Link } from 'react-router-dom';
 import QuoteForm from '../components/QuoteForm';
 
 const useStyles = makeStyles((theme) => ({
@@ -13,13 +11,10 @@ const useStyles = makeStyles((theme) => ({
     banner:{
         boxSizing: 'border-box',
         padding: '30px',
-        // float: 'left'
     },
     quoteForm: {
         boxSizing: 'border-box',
         padding: '30px',
-        // width: '600px',
-        // float: 'left'
     },
     h3: {
         ...theme.typography.h3,
@@ -28,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
     },
     h5: {
         ...theme.typography.h5,
-        // float: 'left',
         textAlign:'left',
         width: '100%',
     }
